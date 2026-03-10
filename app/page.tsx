@@ -56,43 +56,43 @@ export default function Home() {
         />
 
         <img
-          src="/uur-wijzer.png"
-          alt="Uurwijzer"
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: "52.58%",
-            width: "6.59%",
-            transform: `translate(-50%, -100%) rotate(${hours}deg)`,
-            transformOrigin: "50% 89%",
-          }}
-        />
+  src="/uur-wijzer.png"
+  alt="Uurwijzer"
+  style={{
+    position: "absolute",
+    left: "50%",
+    top: "52.58%",
+    width: "20%",
+    transform: `translate(-50%, -100%) rotate(${hours}deg)`,
+    transformOrigin: "50% 89%",
+  }}
+/>
 
-        <img
-          src="/min-wijzer.png"
-          alt="Minutenwijzer"
-          style={{
-            position: "absolute",
-            left: "52.33%",
-            top: "51.68%",
-            width: "6.12%",
-            transform: `translate(-50%, -100%) rotate(${minutes}deg)`,
-            transformOrigin: "50% 95%",
-          }}
-        />
+<img
+  src="/min-wijzer.png"
+  alt="Minutenwijzer"
+  style={{
+    position: "absolute",
+    left: "52.33%",
+    top: "51.68%",
+    width: "20%",
+    transform: `translate(-50%, -100%) rotate(${minutes}deg)`,
+    transformOrigin: "50% 95%",
+  }}
+/>
 
-        <img
-          src="/sec-wijzer.png"
-          alt="Secondewijzer"
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: "51.14%",
-            width: "3.88%",
-            transform: `translate(-50%, -100%) rotate(${seconds}deg)`,
-            transformOrigin: "50% 95%",
-          }}
-        />
+<img
+  src="/sec-wijzer.png"
+  alt="Secondewijzer"
+  style={{
+    position: "absolute",
+    left: "50%",
+    top: "51.14%",
+    width: "12%",
+    transform: `translate(-50%, -100%) rotate(${seconds}deg)`,
+    transformOrigin: "50% 95%",
+  }}
+/>
       </div>
     </main>
   );
