@@ -1,25 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [time, setTime] = useState<Date | null>(null);
+  const tikGeluid = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    setTime(new Date());
+  tikGeluid.current = new Audio("/kloktik.mp3");
+}, []);
 
-    const timer = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
+useEffect(() => {
+  const updateTime = () => {
+    const now = new Date();
+    setTime(now);
 
-    return () => clearInterval(timer);
-  }, []);
+    const delay = 1000 - now.getMilliseconds();
 
-  if (!time) return null;
+    setTimeout(updateTime, delay);
+  };
 
+  updateTime();
+}, []);
+
+ 
+useEffect(() => {
+  if (!time) return;
+
+  if (tikGeluid.current) {
+    const nieuwGeluid = tikGeluid.current.cloneNode() as HTMLAudioElement;
+    nieuwGeluid.play().catch(() => {});
+  }
+}, [time]);
+
+if (!time) return null;
   const seconds = time.getSeconds() * 6;
   const minutes = time.getMinutes() * 6 + seconds / 60;
   const hours = (time.getHours() % 12) * 30 + minutes / 12;
+
 
   return (
     <main
