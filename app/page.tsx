@@ -43,6 +43,7 @@ export default function Home() {
           maxHeight: "100vh",
         }}
       >
+        {/* wijzerplaat */}
         <img
           src="/wijzerplaat.png"
           alt="Wijzerplaat"
@@ -55,44 +56,47 @@ export default function Home() {
           }}
         />
 
+        {/* uurwijzer */}
         <img
-  src="/uur-wijzer.png"
-  alt="Uurwijzer"
-  style={{
-    position: "absolute",
-    left: "50%",
-    top: "52.58%",
-    width: "20%",
-    transform: `translate(-50%, -100%) rotate(${hours}deg)`,
-    transformOrigin: "50% 89%",
-  }}
-/>
+          src="/uur-wijzer.png"
+          alt="Uurwijzer"
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "54.7%",
+            width: "7%",
+            transform: `translate(-50%, -100%) rotate(${hours}deg)`,
+            transformOrigin: "50% 87%",
+          }}
+        />
 
-<img
-  src="/min-wijzer.png"
-  alt="Minutenwijzer"
-  style={{
-    position: "absolute",
-    left: "52.33%",
-    top: "51.68%",
-    width: "20%",
-    transform: `translate(-50%, -100%) rotate(${minutes}deg)`,
-    transformOrigin: "50% 95%",
-  }}
-/>
+        {/* minutenwijzer */}
+        <img
+          src="/min-wijzer.png"
+          alt="Minutenwijzer"
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "55%",
+            width: "8%",
+            transform: `translate(-50%, -100%) rotate(${minutes}deg)`,
+            transformOrigin: "50% 87%",
+          }}
+        />
 
-<img
-  src="/sec-wijzer.png"
-  alt="Secondewijzer"
-  style={{
-    position: "absolute",
-    left: "50%",
-    top: "51.14%",
-    width: "12%",
-    transform: `translate(-50%, -100%) rotate(${seconds}deg)`,
-    transformOrigin: "50% 95%",
-  }}
-/>
+        {/* secondewijzer */}
+        <img
+          src="/sec-wijzer.png"
+          alt="Secondewijzer"
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "55%",
+            width: "7.5%",
+            transform: `translate(-50%, -100%) rotate(${seconds}deg)`,
+            transformOrigin: "50% 87%",
+          }}
+        />
       </div>
     </main>
   );
